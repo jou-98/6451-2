@@ -249,11 +249,12 @@ contract Test is IERC20{
 
     // Called by the issuer after round 2 deadline
     // Issues tokens all at once
-    // > Requirement 12 <
+    // > Requirement 10 & 12 <
     function issueTokens() public payable{
         require(block.timestamp > ddl2, "Cannot issue tokens before round 2 deadline.");
         bool done;
         openBid memory currBid = openHead;
+        // Look through all bids
         while(currBid.self <= tail){
             if(done){                                           // All tokens issued, refund other bids
                 uint refund = currBid.price * currBid.n_shares * (1 ether);

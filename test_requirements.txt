@@ -1,3 +1,5 @@
 node 14.18.1
 execute command 
-npm install -g truffle
+sudo npm install -g truffle
+sudo npm install -g ganache-cli 
+ganache-cli
