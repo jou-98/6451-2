@@ -1,0 +1,3 @@
+node 14.18.1
+execute command 
+npm install -g truffle
